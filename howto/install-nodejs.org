@@ -1,0 +1,25 @@
+* How to install Node.js For person use (NOT SERVER USE)
+
+# Download Node.js from nodejs.org 
+
+# Create .local directory
+mkdir ~/.local/
+
+# Add ~/.local/bin to your PATH
+vim .profile
+
+# Exact node-v4.3.1-linux-x64.tar.xz to ~/.local
+# --strip-components will remove a number of components from each file inside
+# the archive, e.g. Inside the tar file all files are in the /node folder.
+# --strip-components 1 will remove the /node component from the extraction xo
+# only files are extracted
+tar -C ~/.local --strip-components 1 -xf node-v4.3.1-linux-x64.tar.xz
+
+# Source your change
+source .profile
+
+# Check your path
+echo $PATH 
+
+# Test node version
+node --version
