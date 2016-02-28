@@ -50,7 +50,7 @@ http://orgmode.org/manual/Working-With-Source-Code.html#Working-With-Source-Code
     (with-temp-buffer
       (insert-file-contents file)
       (org-mode)
-      (concat "\n- [" (nth 0 (getDocumentTitle)) "](../blob/master/" file ")")))
+      (concat "\n- [" (nth 0 (getDocumentTitle)) "](" file ")")))
 
   (dolist
     (link (mapcar 'fileToMarkdownLink (getFilesInDir "howto")))
