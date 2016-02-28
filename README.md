@@ -2,10 +2,25 @@
 
 A collection of notes in org-mode format.
 
+#+RESULTS: TableOfContents
+: 
+: - [How To Install Node.js For Personal (Non-Server) Use](../blob/master/howto/install-nodejs.org)
+: - [How to Remap Right Menu Key to Ctrl In Linux](../blob/master/howto/remap-right-menu-key-to-ctrl.org)
+
+
+## Export File To HTML
+
+`M-x org-html-export-to-html`
+
+## Export File To ASCII
+
+`M-x org-html-export-to-ascii`
+
 http://orgmode.org/worg/dev/org-element-api.html#attributes
 https://github.com/caiorss/Emacs-Elisp-Programming#defining-functions
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
 http://orgmode.org/manual/Code-evaluation-security.html#Code-evaluation-security
+http://orgmode.org/manual/Working-With-Source-Code.html#Working-With-Source-Code
 
 ```elisp
 #+begin_src emacs-lisp :exports none
@@ -14,7 +29,8 @@ http://orgmode.org/manual/Code-evaluation-security.html#Code-evaluation-security
     '((python . t) (js . t))
 #+end_src
 
-#+begin_src elisp :results output yes
+#+NAME: TableOfContents
+#+begin_src elisp :results output
   (defun getFilesInDir (dir)
     "Show the files in the folder that are registered with git."
     (split-string
@@ -36,25 +52,9 @@ http://orgmode.org/manual/Code-evaluation-security.html#Code-evaluation-security
       (org-mode)
       (concat "\n- [" (nth 0 (getDocumentTitle)) "](../blob/master/" file ")")))
 
-  (print (mapcar 'fileToMarkdownLink (getFilesInDir "howto")))
+  (dolist
+    (link (mapcar 'fileToMarkdownLink (getFilesInDir "howto")))
+    (princ link))
 #+end_src
 
-#+RESULTS:
-: 
-: ("[How To Install Node.js For Personal (Non-Server) Use](../blob/master/howto/install-nodejs.org)" "[How to Remap Right Menu Key to Ctrl In Linux](../blob/master/howto/remap-right-menu-key-to-ctrl.org)")
-
 ```
-
-#+RESULTS:
-: 
-: ("[How To Install Node.js For Personal (Non-Server) Use](../blob/master/howto/install-nodejs.org)" "[How to Remap Right Menu Key to Ctrl In Linux](../blob/master/howto/remap-right-menu-key-to-ctrl.org)")
-
-## Export File To HTML
-
-`M-x org-html-export-to-html`
-
-## Export File To ASCII
-
-`M-x org-html-export-to-ascii`
-
-# (org-confirm-babel-evaluate nil)
