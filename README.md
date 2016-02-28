@@ -13,11 +13,11 @@ A collection of notes in org-mode format.
 
 `M-x org-html-export-to-ascii`
 
-http://orgmode.org/worg/dev/org-element-api.html#attributes
-https://github.com/caiorss/Emacs-Elisp-Programming#defining-functions
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
-http://orgmode.org/manual/Code-evaluation-security.html#Code-evaluation-security
-http://orgmode.org/manual/Working-With-Source-Code.html#Working-With-Source-Code
+- http://orgmode.org/worg/dev/org-element-api.html#attributes
+- https://github.com/caiorss/Emacs-Elisp-Programming#defining-functions
+- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
+- http://orgmode.org/manual/Code-evaluation-security.html#Code-evaluation-security
+- http://orgmode.org/manual/Working-With-Source-Code.html#Working-With-Source-Code
 
 ```elisp
 #+begin_src emacs-lisp :exports none
