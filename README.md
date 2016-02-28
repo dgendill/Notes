@@ -2,16 +2,17 @@
 
 A collection of notes in org-mode format.
 
+http://orgmode.org/worg/dev/org-element-api.html#attributes
+https://github.com/caiorss/Emacs-Elisp-Programming#defining-functions
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
+http://orgmode.org/manual/Code-evaluation-security.html#Code-evaluation-security
+
+```elisp
 #+begin_src emacs-lisp :exports none
    (org-babel-do-load-languages
     'org-babel-load-languages
     '((python . t) (js . t))
 #+end_src
-
-http://orgmode.org/worg/dev/org-element-api.html#attributes
-https://github.com/caiorss/Emacs-Elisp-Programming#defining-functions
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
-http://orgmode.org/manual/Code-evaluation-security.html#Code-evaluation-security
 
 #+begin_src elisp :results output yes
   (defun getFilesInDir (dir)
@@ -33,10 +34,16 @@ http://orgmode.org/manual/Code-evaluation-security.html#Code-evaluation-security
     (with-temp-buffer
       (insert-file-contents file)
       (org-mode)
-      (concat "[" (nth 0 (getDocumentTitle)) "](../blob/master/" file ")")))
+      (concat "\n- [" (nth 0 (getDocumentTitle)) "](../blob/master/" file ")")))
 
   (print (mapcar 'fileToMarkdownLink (getFilesInDir "howto")))
 #+end_src
+
+#+RESULTS:
+: 
+: ("[How To Install Node.js For Personal (Non-Server) Use](../blob/master/howto/install-nodejs.org)" "[How to Remap Right Menu Key to Ctrl In Linux](../blob/master/howto/remap-right-menu-key-to-ctrl.org)")
+
+```
 
 #+RESULTS:
 : 

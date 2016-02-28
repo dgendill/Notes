@@ -1,4 +1,5 @@
-#+TITLE: How To Install Node.js For Personal Use (Non-Server) Use
+#+TITLE: How To Install Node.js For Personal (Non-Server) Use
+
 #+DATE: <2016-02-25 Thu> 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../css/notes.css" />
 

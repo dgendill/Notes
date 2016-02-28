@@ -1,25 +1,28 @@
-* How to Remap Right Menu Key to Ctrl In Linux
-    <2016-02-21 Sun>
-    To get a key's keycode run `xev` and type the key you are interested in.  The output in the terminal will show the keycode and the name of the key.
-    You can then use this to create xmodmap file. So when I press the right "Menu" key it tells me the keycode is 135 and the name of the key is "Menu" So the xmodmap file I create looks like...
+#+TITLE: How to Remap Right Menu Key to Ctrl In Linux
+#+DATE: <2016-02-21 Sun>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../css/notes.css" />
+
+<2016-02-21 Sun>
+To get a key's keycode run `xev` and type the key you are interested in.  The output in the terminal will show the keycode and the name of the key.
+You can then use this to create xmodmap file. So when I press the right "Menu" key it tells me the keycode is 135 and the name of the key is "Menu" So the xmodmap file I create looks like...
 
 http://www.x.org/releases/current/doc/man/man1/xmodmap.1.xhtml
 http://xahlee.info/linux/linux_xmodmap_tutorial.html
 http://xahlee.info/linux/linux_show_keycode_keysym.html
 
-    .mymodmap
-    ```
-    ! Set the "Menu" key to Control_R
-    keycode 135 = Control_R
-    ! Now update the Control key?
-    add Control = Control_R
-    ```
+.mymodmap
+```
+! Set the "Menu" key to Control_R
+keycode 135 = Control_R
+! Now update the Control key?
+add Control = Control_R
+```
 
-    To start on system start create .xinitrc and add...
+To start on system start create .xinitrc and add...
 
-    ```
-    if [ -s ~/.mymodmap ]; then
-        xmodmap ~/.mymodmap
-    fi
-    ```
- 
+```
+if [ -s ~/.mymodmap ]; then
+    xmodmap ~/.mymodmap
+fi
+```
+

@@ -2,3 +2,7 @@
 */*.html
 */*.tex
 */*.md
+*.desktop
+*.lock
+\#*
+.\#*
