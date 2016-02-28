@@ -4,8 +4,8 @@ A collection of notes in org-mode format.
 
 #+RESULTS: TableOfContents
 : 
-: - [How To Install Node.js For Personal (Non-Server) Use](../blob/master/howto/install-nodejs.org)
-: - [How to Remap Right Menu Key to Ctrl In Linux](../blob/master/howto/remap-right-menu-key-to-ctrl.org)
+: - [How To Install Node.js For Personal (Non-Server) Use](./howto/install-nodejs.org)
+: - [How to Remap Right Menu Key to Ctrl In Linux](./howto/remap-right-menu-key-to-ctrl.org)
 
 
 ## Export File To HTML
