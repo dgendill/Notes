@@ -11,8 +11,8 @@ You can then use this to create xmodmap file. So when I press the right "Menu" k
 - http://xahlee.info/linux/linux_xmodmap_tutorial.html
 - http://xahlee.info/linux/linux_show_keycode_keysym.html
 
-* .mymodmap
 #+BEGIN_EXAMPLE
+! File name .mymodmap
 ! Set the "Menu" key to Control_R
 keycode 135 = Control_R
 ! Now update the Control key?
@@ -21,7 +21,6 @@ add Control = Control_R
 
 To start on system start create .xinitrc and add...
 
-* .xinitrc 
 #+BEGIN_EXAMPLE
 if [ -s ~/.mymodmap ]; then
     xmodmap ~/.mymodmap
