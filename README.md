@@ -2,9 +2,9 @@
 
 A collection of notes in org-mode format.
 
-: - [How To Install Common Lisp](howto/install-lisp.org)
-: - [How To Install Node.js For Personal (Non-Server) Use](howto/install-nodejs.org)
-: - [How to Remap Right Menu Key to Ctrl In Linux](howto/remap-right-menu-key-to-ctrl.org)
+- [How To Install Common Lisp](howto/install-lisp.org)
+- [How To Install Node.js For Personal (Non-Server) Use](howto/install-nodejs.org)
+- [How to Remap Right Menu Key to Ctrl In Linux](howto/remap-right-menu-key-to-ctrl.org)
 
 ## Export File To HTML
 
