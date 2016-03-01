@@ -1,0 +1,24 @@
+#+TITLE: How To Install Common Lisp
+#+DATE: <2016-02-29 Mon> 
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../css/notes.css" />
+
+* Overview
+  http://stackoverflow.com/a/6548692
+  http://www.jonathanfischer.net/modern-common-lisp-on-linux/
+
+* Install Steel Bank Common Lisp
+   http://www.sbcl.org/platform-table.html
+
+   #+BEGIN_EXAMPLE 
+   # Download, and run INSTALL in /home/user/.local. See readme for installing
+   # as local user.  Set SBCL_HOME environment variable so it know where sbcl.core
+   # is
+   #+END_EXAMPLE
+
+* Install Quicklisp
+   https://www.quicklisp.org/beta/
+
+* Install SLIME for Emacs
+   #+BEGIN_EXAMPLE 
+   M-x package-install slime
+   #+END_EXAMPLE
