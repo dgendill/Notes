@@ -1,4 +1,4 @@
-How to Deploy Your Purescript Project
+# How to Deploy Your Purescript Project
 
 This is an example of a very simple purescript workflow.  It's probaly not ideal, but it should server as a good starting point for beginners.
 

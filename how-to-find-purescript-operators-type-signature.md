@@ -3,12 +3,14 @@
 
 You can use the :type command in psci, and put the operator in parenthesis. e.g.
 
+```
 > :type (++)
 forall s. (Semigroup s) => s -> s -> s
 
 > Import Data.Array
 > :type (..)
 Int -> Int -> Array Int
+```
 
 # How do I find the 'fixity declaration', aka 'user defind operator', aka 'operator alias' for a PureScript function?
 
